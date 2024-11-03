@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ucapan Romantis untuk Lala</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Slide Pertama: Ucapan Ulang Tahun -->
+        <div class="slide" id="slide1">
+            <h1>Selamat Ulang Tahun, Lala!</h1>
+            <p>Hari ini adalah hari spesialmu, semoga semua keinginanmu tercapai dan kebahagiaan selalu menyertaimu.</p>
+            <button onclick="nextSlide()">Lanjutkan</button>
+        </div>
+
+        <!-- Slide Kedua: Pesan Romantis -->
+        <div class="slide" id="slide2">
+            <h1>Untuk Lala Tersayang</h1>
+            <p>Aku bersyukur setiap hari bisa ada di sampingmu. Kamu adalah cahaya di hidupku yang tak pernah padam.</p>
+            <p>Semoga kita selalu bersama, saling melengkapi, dan saling mendukung dalam segala hal.</p>
+            <button onclick="prevSlide()">Kembali</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+
+        function nextSlide() {
+            document.getElementById(`slide${currentSlide}`).style.display = 'none';
+            currentSlide++;
+            document.getElementById(`slide${currentSlide}`).style.display = 'block';
+        }
+
+        function prevSlide() {
+            document.getElementById(`slide${currentSlide}`).style.display = 'none';
+            currentSlide--;
+            document.getElementById(`slide${currentSlide}`).style.display = 'block';
+        }
+
+        // Set default slide
+        document.getElementById("slide2").style.display = "none";
+    </script>
+</body>
+</html>
